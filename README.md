@@ -1,13 +1,13 @@
-# 🎓 Student Performance EDA & Machine Learning
+# 🎓 Student Performance EDA, Statistical Analysis & Machine Learning
 
 ## 📌 Project Overview
-This project focuses on **exploratory data analysis (EDA)** and **regression-based machine learning** to analyze and predict **student exam performance**.  
-The aim is to understand how study habits, lifestyle factors, and demographic characteristics influence exam scores.
+This project aims to analyze and predict **student exam performance** through **exploratory data analysis (EDA)**, **statistical hypothesis testing**, **feature selection**, and **regression-based machine learning**.  
+The study focuses on understanding how academic habits, lifestyle factors, and demographic variables influence exam scores, both individually and in combination.
 
 ---
 
 ## 📊 Dataset Description
-The dataset consists of **1000 rows and 16 features**, including:
+The dataset contains **1000 observations and 16 features**, including:
 
 - **Demographic features:**  
   `age`, `gender`, `parental_education_level`
@@ -17,34 +17,49 @@ The dataset consists of **1000 rows and 16 features**, including:
 - **Target variable:**  
   `exam_score` (continuous)
 
-Since the target variable is continuous, this project is formulated as a **regression problem**.
+Given the continuous nature of the target variable, the problem is formulated as a **regression task**.
 
 ---
 
 ## 🔍 Exploratory Data Analysis (EDA)
 The EDA process includes:
 
-- Distribution analysis of numerical features  
-- Handling missing values with low frequency  
+- Distribution and density analysis of numerical features  
+- Missing value handling (low-frequency, single-column NaNs)  
 - Outlier detection using the **Interquartile Range (IQR)** method  
 - Visual exploration using histograms, box plots, and scatter plots  
-- Interpretation of:
+- Pattern interpretation, including:
   - Near-linear relationships (e.g. study hours vs exam score)
   - Vertically dispersed patterns indicating weak or indirect effects
   - Frequency-based clustering in lifestyle-related variables
 
-These analyses help reveal both direct and indirect factors affecting student performance.
+---
+
+## 📐 Statistical Analysis & Feature Selection
+To support data-driven feature selection, the following statistical methods are planned:
+
+- **Correlation analysis**  
+  - Pearson correlation (parametric)  
+  - Spearman rank correlation (non-parametric)
+- **Hypothesis testing**
+  - ANOVA (for numerical vs categorical relationships)
+  - Chi-square tests (for categorical variables)
+- **Feature selection techniques**
+  - Statistical significance-based filtering  
+  - Correlation thresholding  
+  - Model-based feature importance (regression coefficients, tree-based models)
+
+These methods help identify the most informative features while reducing redundancy and noise.
 
 ---
 
 ## 🤖 Machine Learning Approach
 - **Problem type:** Regression  
 - **Baseline model:** Linear Regression  
+- **Extendable models:** Ridge, Lasso, tree-based regressors  
 - **Evaluation metrics:**  
   - R² Score  
   - RMSE (Root Mean Squared Error)
-
-The model is trained to predict **exam_score** based on student-related features.
 
 ---
 
@@ -59,19 +74,22 @@ The original license terms are respected in accordance with the MIT License.
 
 ---
 
-## 🛠️ Technologies Used
-- Python  
-- Pandas, NumPy  
-- Matplotlib, Seaborn  
-- Scikit-learn  
+## 🛠️ Technologies & Libraries
+- **Python**
+- **Data analysis:** Pandas, NumPy  
+- **Visualization:** Matplotlib, Seaborn  
+- **Statistical analysis:** SciPy, Statsmodels  
+- **Machine learning:** Scikit-learn  
+- **Deployment / UI (planned):** Streamlit  
 
 ---
 
 ## 🚀 Future Work
-- Improve model performance using advanced regression models  
-- Feature engineering and interaction analysis  
-- Integration of the trained model into an **interactive Python-based interface**
-  (e.g. Streamlit) for real-time exam score prediction
+- Perform detailed statistical testing for feature validation  
+- Apply advanced feature selection strategies  
+- Improve predictive performance with ensemble regressors  
+- Integrate the trained model into an **interactive Streamlit interface**
+  for real-time exam score prediction
 
 ---
 
